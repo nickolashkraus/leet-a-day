@@ -4,6 +4,7 @@ import (
 	"errors"
 	"math"
 	"strings"
+	"unicode"
 )
 
 // 171. Excel Sheet Column Number
@@ -36,6 +37,45 @@ func TitleToNumber(columnTitle string) (int, error) {
 	}
 
 	return columnNumber, nil
+}
+
+// 1805. Number of Different Integers in a String
+//
+// https://leetcode.com/problems/number-of-different-integers-in-a-string
+//
+// NOTES
+//   * Use a hash table for integer lookups.
+func NumDifferentIntegers(word string) (int, error) {
+
+	// 1 <= word.length <= 1000
+	if len(word) < 1 || len(word) > 1000 {
+		return 0, errors.New("Error: 1 <= word.length <= 1000")
+	}
+
+	integers := make(map[string]bool)
+	runes := []rune{}
+	for _, c := range word {
+		if unicode.IsDigit(c) {
+			runes = append(runes, c)
+		} else if len(runes) > 0 {
+			integers = insertInterger(integers, runes)
+			runes = []rune{}
+		}
+	}
+	if len(runes) > 0 {
+		integers = insertInterger(integers, runes)
+	}
+	return len(integers), nil
+}
+
+// Insert integer in map 'integers', if it is not in the map
+func insertInterger(integers map[string]bool, runes []rune) map[string]bool {
+	integer := strings.TrimLeft(string(runes), "0")
+	elem, _ := integers[integer]
+	if !elem {
+		integers[integer] = true
+	}
+	return integers
 }
 
 func main() {}
