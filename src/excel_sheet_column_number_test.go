@@ -5,6 +5,7 @@ import (
 )
 
 func TestTitleToNumber(t *testing.T) {
+
 	ret := titleToNumber("A")
 	if ret != 1 {
 		t.Fail()

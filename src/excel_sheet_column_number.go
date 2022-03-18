@@ -13,13 +13,13 @@ import (
 func titleToNumber(columnTitle string) int {
 
 	// A is 65 in decimal
-	offset, columnNumber := 64, 0
+	offset, columnNumber, columnTitleLength := 64, 0, len(columnTitle)
 
 	for i, c := range columnTitle {
-		if i == len(columnTitle)-1 {
+		if i == columnTitleLength-1 {
 			columnNumber += int(c) - offset
 		} else {
-			columnNumber += (int(c) - offset) * int(math.Pow(26, float64(len(columnTitle)-i-1)))
+			columnNumber += (int(c) - offset) * int(math.Pow(26, float64(columnTitleLength-i-1)))
 		}
 	}
 
