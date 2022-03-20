@@ -20,20 +20,20 @@ func numDifferentIntegers(word string) int {
 		if unicode.IsDigit(c) {
 			runes = append(runes, c)
 		} else if len(runes) > 0 {
-			integers = insertInterger(integers, runes)
+			integers = insertInteger(integers, runes)
 			runes = []rune{}
 		}
 	}
 
 	if len(runes) > 0 {
-		integers = insertInterger(integers, runes)
+		integers = insertInteger(integers, runes)
 	}
 
 	return len(integers)
 }
 
 // Insert integer (as string) in map 'integers', if it is not in the map
-func insertInterger(integers map[string]bool, runes []rune) map[string]bool {
+func insertInteger(integers map[string]bool, runes []rune) map[string]bool {
 
 	integer := strings.TrimLeft(string(runes), "0")
 
