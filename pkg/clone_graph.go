@@ -1,4 +1,4 @@
-package main
+package pkg
 
 // 133. Clone Graph
 //

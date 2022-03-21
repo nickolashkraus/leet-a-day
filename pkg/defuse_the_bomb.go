@@ -1,4 +1,4 @@
-package main
+package pkg
 
 // 1652. Defuse the Bomb
 //
