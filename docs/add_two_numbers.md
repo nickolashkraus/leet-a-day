@@ -1,4 +1,4 @@
-# Add Two Numbers
+# 2. Add Two Numbers
 
 ## Approach 1: Elementary Math
 
