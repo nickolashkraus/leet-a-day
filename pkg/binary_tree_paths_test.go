@@ -9,15 +9,15 @@ func TestBinaryTreePaths(t *testing.T) {
 	tree := []string{"1", "2", "3", "null", "5"}
 	// Pointer to the root node of the binary tree.
 	rootNode := binaryTreeFromSlice(tree, 0)
-	res := binaryTreePaths(rootNode)
-	if !reflect.DeepEqual([]string{"1->2->5", "1->3"}, res) {
+	ret := binaryTreePaths(rootNode)
+	if !reflect.DeepEqual([]string{"1->2->5", "1->3"}, ret) {
 		t.Fail()
 	}
 	tree = []string{"1"}
 	// Pointer to the root node of the binary tree.
 	rootNode = binaryTreeFromSlice(tree, 0)
-	res = binaryTreePaths(rootNode)
-	if !reflect.DeepEqual([]string{"1"}, res) {
+	ret = binaryTreePaths(rootNode)
+	if !reflect.DeepEqual([]string{"1"}, ret) {
 		t.Fail()
 	}
 }
