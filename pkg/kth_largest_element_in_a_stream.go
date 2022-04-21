@@ -39,8 +39,8 @@ func (h *IntHeap) Pop() interface{} {
 }
 
 type KthLargest struct {
-	k       int
-	intHeap *IntHeap
+	K       int
+	IntHeap *IntHeap
 }
 
 // Initialize KthLargest object with the integer k (kth largest element) and
@@ -55,15 +55,15 @@ func KthLargestConstructor(k int, nums []int) KthLargest {
 		_ = heap.Pop(&h)
 	}
 	return KthLargest{
-		k:       k,
-		intHeap: &h,
+		K:       k,
+		IntHeap: &h,
 	}
 }
 
 // Append the integer val to the stream and return the element representing the
 // kth largest element in the stream.
 func (this *KthLargest) Add(val int) int {
-	k, h := this.k, this.intHeap
+	k, h := this.K, this.IntHeap
 	heap.Push(h, val)
 	if h.Len() > k {
 		_ = heap.Pop(h)
