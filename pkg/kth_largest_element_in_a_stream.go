@@ -45,7 +45,7 @@ type KthLargest struct {
 
 // Initialize KthLargest object with the integer k (kth largest element) and
 // a stream of integers nums.
-func Constructor(k int, nums []int) KthLargest {
+func KthLargestConstructor(k int, nums []int) KthLargest {
 	h := make(IntHeap, len(nums))
 	for i, elem := range nums {
 		h[i] = elem

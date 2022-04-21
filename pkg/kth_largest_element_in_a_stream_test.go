@@ -6,7 +6,7 @@ import (
 
 func TestKthLargest(t *testing.T) {
 	k, nums := 3, []int{4, 5, 8, 2}
-	kthLargest := Constructor(k, nums)
+	kthLargest := KthLargestConstructor(k, nums)
 	ret := kthLargest.Add(3) // return 4
 	if ret != 4 {
 		t.Fail()
