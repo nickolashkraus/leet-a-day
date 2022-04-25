@@ -16,3 +16,4 @@ A collection of LeetCode problems
 **Medium**
 * [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
 * [133. Clone Graph](https://leetcode.com/problems/clone-graph)
+* [146. LRU Cache](https://leetcode.com/problems/lru-cache)
