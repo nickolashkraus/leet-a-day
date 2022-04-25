@@ -18,3 +18,4 @@ A collection of LeetCode problems
 * [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers)
 * [133. Clone Graph](https://leetcode.com/problems/clone-graph)
 * [146. LRU Cache](https://leetcode.com/problems/lru-cache)
+* [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number)
