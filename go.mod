@@ -1,3 +1,3 @@
-module github.com/NickolasHKraus/leet-a-day
+module github.com/nickolashkraus/leet-a-day
 
 go 1.18

@@ -1,6 +1,6 @@
 # Leet-A-Day
 
-[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/NickolasHKraus/leet-a-day/blob/master/LICENSE)
+[![MIT License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/nickolashkraus/leet-a-day/blob/master/LICENSE)
 
 A collection of LeetCode problems
 
